@@ -15,7 +15,7 @@ body{
 body{
   display:grid;
   place-items: center;
-  background-image: url(images/background-desktop.png);
+  background: url("images/background-desktop.png") no-repeat top/ cover fixed;
   background-position: center;
   background-size: cover;
 
