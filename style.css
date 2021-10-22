@@ -1,0 +1,143 @@
+*{
+  margin: 0;
+}
+
+html, 
+body{
+  --black: hsl(240, 6%, 13%);
+  --grey: hsl(240, 9%, 89%);
+
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased; 
+  
+}
+body{
+  display:grid;
+  place-items: center;
+  background-image: url(images/background-desktop.png);
+  background-position: center;
+  background-size: cover;
+
+}
+main{
+  background: url(images/background.png); /*TIVE PROBLEMAS COM O FORMATO SVG*/
+  width: 375px;
+  height: 812px;
+  border-radius: 5px;
+}
+
+.container{
+  max-width: 250px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  color: var(--grey);
+}
+
+.avatar{
+  width: 10rem; 
+  margin: 11.5rem auto 0;
+  position: relative;
+}
+
+.avatar span{
+  position: absolute;
+  top: -15px;
+  z-index: 1;
+}
+
+.avatar > img {
+  width: 10rem;
+  height: 11.5rem;
+  object-fit: cover;
+  clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%); /*clippy css buscar site para definir cantos bennettfeely.com*/
+}
+
+h1{
+  font-size: 1.5rem;
+  margin-top: 1.5rem;
+  
+}
+
+a{
+  color:var(--grey);
+  text-decoration: none;
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  margin-top: 0.25rem;
+  align-items: center;
+}
+
+p{
+  margin-top: 2rem;
+  text-align: justify;
+}
+
+ul{
+  margin-top: 4rem;
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.social-btn {
+  position: relative;
+  border-radius: 00.25rem;
+  width: 50px;
+  top: 0;
+  transition: all ease 0.3s;
+}
+
+.social-btn:hover{
+  border-radius: 50%;
+  top: -8px;
+}
+
+/*Media Queries*/
+
+@media(min-width:800px) {
+  main{
+    width: 358px;
+    height: 540px;
+    background: url(images/background-card-desktop.png);
+    background-color: #202024;
+    background-size: 358px 540px;
+  }
+
+  .avatar {
+    margin:4.7rem auto 0;
+
+  }
+
+  ul {
+    margin: 1.5rem auto 0;
+  }
+
+  .rope {
+    position: absolute;
+    z-index: 2;
+    width: 80px;
+    height: 750px;
+    background: linear-gradient(161.24deg, #FF008E -15.25%, #FFCD1E 111.89%);
+    border-radius: 0 0 3px 3px;
+    top: 0;
+    margin-top: -45rem;
+    margin-left: 8.9rem;
+    
+  }
+
+  .clasp {
+    position: absolute;
+    background: #121214;
+    z-index: 1;
+    width: 100px;
+    height: 12px;
+    margin-left: 8.3rem;
+    margin-top: 1.5rem;
+    border-radius: 1.5rem;
+  }
+}
